@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from 'dotenv';
 import userRoute from './routes/routeUser.js';
 import productRoute from './routes/routeProduct.js';
+import uiwRoute from './routes/routeUiw.js';
+import areaRoute from './routes/routeArea.js';
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ app.use(cors({
 app.use(express.json());
 app.use(userRoute);
 app.use(productRoute);
+app.use(uiwRoute);
+app.use(areaRoute);
 
 
 app.listen(process.env.APP_PORT, () => {
