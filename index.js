@@ -6,6 +6,8 @@ import productRoute from './routes/routeProduct.js';
 import uiwRoute from './routes/routeUiw.js';
 import areaRoute from './routes/routeArea.js';
 import deliveryRoute from './routes/routeDelivery.js';
+import ReplaceRoute from './routes/routeReplace.js';
+import ClaimRoute from './routes/routeClaim.js';
 
 dotenv.config();
 
@@ -22,6 +24,8 @@ app.use(productRoute);
 app.use(uiwRoute);
 app.use(areaRoute);
 app.use(deliveryRoute);
+app.use(ReplaceRoute);
+app.use(ClaimRoute);
 
 
 app.listen(process.env.APP_PORT, () => {
